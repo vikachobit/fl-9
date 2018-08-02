@@ -5,7 +5,7 @@ write your code here
 */
 @media print {
     @page{
-        size: 210mm 297mm; /* landscape */
+        size: 210mm 297mm;
         margin: 1cm;
 
     }
