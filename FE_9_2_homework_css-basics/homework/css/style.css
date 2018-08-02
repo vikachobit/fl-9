@@ -4,8 +4,12 @@ write your code here
 
 */
 @media print {
+    @page{
+        size: 210mm 297mm; /* landscape */
+        margin: 1cm;
 
-    .tm-sidebar, #about, section:not(:first-child) {
+    }
+    .tm-sidebar, #about, section:not(:first-of-type) {
         display: none;
     }
 
@@ -22,7 +26,7 @@ write your code here
         height: 250px;
     }
 
-    .flex-2-col {
+    .flex-2-col{
         flex-direction: column;
     }
 
