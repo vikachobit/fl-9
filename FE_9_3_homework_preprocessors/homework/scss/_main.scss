@@ -1,0 +1,75 @@
+body {
+  width: 960px;
+  margin: 0 auto;
+  background: $contentBackground;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  img {
+    width: 380px;
+  }
+  nav {
+    align-self: flex-end;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #617D8A;
+    border-top: 1px solid #617D8A;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    a {
+      text-transform: uppercase;
+      text-decoration: none;
+      margin-top: 3px;
+      color: $textColorNav;
+      font-family: $textFontNav;
+    }
+  }
+}
+
+.toolbar {
+  float: right;
+  margin-bottom: 20px;
+
+  input {
+    height: 35px;
+    width: 200px;
+  }
+}
+
+.post-list {
+  clear: right;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+article {
+  width: 445px;
+  background-color: $articleBackground;
+  padding: 10px;
+  margin-bottom: 20px;
+  height: max-content;
+  img {
+    width: 100%;
+  }
+  h3{
+    text-transform: uppercase;
+    font-family: $textFontNav;
+    font-weight: bold;
+    color: $textColorHeaders;
+    margin: 7px;
+  }
+}
+.post-description{
+  font-family: $textFontNav;
+  font-size: 11pt;
+  border-bottom: 1px solid #617D8A;
+  color: $postDescriptionColor;
+  padding: 7px;
+
+}
