@@ -1,7 +1,7 @@
 body {
   width: 960px;
   margin: 0 auto;
-  background: #fff; }
+  background: #EFEFEF; }
 
 header {
   display: flex;
@@ -11,8 +11,8 @@ header {
   header nav {
     align-self: flex-end;
     margin-bottom: 50px;
-    border-bottom: 1px solid #617D8A;
-    border-top: 1px solid #617D8A;
+    border-bottom: 1px solid #CFD8DC;
+    border-top: 1px solid #CFD8DC;
     height: 60px;
     width: 100%;
     display: flex;
@@ -22,15 +22,32 @@ header {
       text-transform: uppercase;
       text-decoration: none;
       margin-top: 3px;
-      color: #1FBDD6;
-      font-family: Arial, Helvetica, sans-serif; }
+      color: #FC5830;
+      font-family: New Century Schoolbook, serif; }
+      header nav a:hover {
+        color: #f53304;
+        text-decoration: underline; }
+      header nav a:active {
+        color: #c32903;
+        text-decoration: underline; }
 
 .toolbar {
   float: right;
   margin-bottom: 20px; }
-  .toolbar input {
+  .toolbar input[type=text] {
+    background-color: #EFEFEF;
+    box-sizing: border-box;
     height: 35px;
-    width: 200px; }
+    width: 200px;
+    border: 1px solid #FC5830;
+    color: #FC5830;
+    padding-left: 20px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out; }
+    .toolbar input[type=text]:focus {
+      width: 400px; }
+    .toolbar input[type=text]::placeholder {
+      color: #FC5830; }
 
 .post-list {
   clear: right;
@@ -40,25 +57,86 @@ header {
   flex-wrap: wrap; }
 
 article {
-  width: 445px;
-  background-color: #EFEFEF;
+  width: 448px;
+  background-color: #fff;
   padding: 10px;
   margin-bottom: 20px;
   height: max-content; }
-  article img {
-    width: 100%; }
   article h3 {
     text-transform: uppercase;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: New Century Schoolbook, serif;
     font-weight: bold;
-    color: #1697A6;
-    margin: 7px; }
+    color: #617D8A;
+    letter-spacing: -0.5px;
+    margin: 7px 0 0 0; }
+  article > div {
+    margin: 0 10px; }
+
+img {
+  width: 100%; }
+
+p {
+  font-family: New Century Schoolbook, serif;
+  color: #75777E;
+  font-size: 11pt;
+  letter-spacing: 0;
+  margin: 0 0 20px 0;
+  line-height: 1.8;
+  clear: right; }
 
 .post-description {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 11pt;
-  border-bottom: 1px solid #617D8A;
-  color: #159587;
+  font-family: New Century Schoolbook, serif;
+  font-size: 10pt;
+  border-bottom: 1px solid #CFD8DC;
+  color: #CABEBB;
   padding: 7px; }
+
+.about {
+  padding: 0 10px; }
+
+form input, form textarea {
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, sans-serif;
+  background-color: #EFEFEF;
+  font-size: 11pt;
+  width: 100%;
+  border: 1px solid #CFD8DC;
+  resize: vertical;
+  padding: 15px 20px;
+  margin: 10px 0; }
+form button[type=submit] {
+  background-color: #FC5830;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 35px;
+  width: 200px;
+  color: white;
+  border: none;
+  float: right; }
+  form button[type=submit]:hover {
+    background-color: #f53304; }
+  form button[type=submit]:active {
+    background-color: #c32903; }
+
+h1, h4 {
+  float: right;
+  clear: right;
+  color: #FC5830;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: New Century Schoolbook, serif;
+  margin: 0; }
+
+h1 {
+  margin-top: 50px; }
+
+h4 {
+  margin-bottom: 20px; }
+
+footer {
+  clear: right;
+  font-family: New Century Schoolbook, serif;
+  color: #75777E;
+  font-size: 10pt; }
 
 /*# sourceMappingURL=style2.css.map */

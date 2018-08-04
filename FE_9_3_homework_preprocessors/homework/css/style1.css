@@ -24,13 +24,30 @@ header {
       margin-top: 3px;
       color: #1FBDD6;
       font-family: Arial, Helvetica, sans-serif; }
+      header nav a:hover {
+        color: #1996a9;
+        text-decoration: underline; }
+      header nav a:active {
+        color: #126e7d;
+        text-decoration: underline; }
 
 .toolbar {
   float: right;
   margin-bottom: 20px; }
-  .toolbar input {
+  .toolbar input[type=text] {
+    background-color: #fff;
+    box-sizing: border-box;
     height: 35px;
-    width: 200px; }
+    width: 200px;
+    border: 1px solid #1FBDD6;
+    color: #1FBDD6;
+    padding-left: 20px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out; }
+    .toolbar input[type=text]:focus {
+      width: 400px; }
+    .toolbar input[type=text]::placeholder {
+      color: #1FBDD6; }
 
 .post-list {
   clear: right;
@@ -40,25 +57,86 @@ header {
   flex-wrap: wrap; }
 
 article {
-  width: 445px;
+  width: 448px;
   background-color: #EFEFEF;
   padding: 10px;
   margin-bottom: 20px;
   height: max-content; }
-  article img {
-    width: 100%; }
   article h3 {
     text-transform: uppercase;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     color: #1697A6;
-    margin: 7px; }
+    letter-spacing: -0.5px;
+    margin: 7px 0 0 0; }
+  article > div {
+    margin: 0 10px; }
+
+img {
+  width: 100%; }
+
+p {
+  font-family: Verdana, Geneva, sans-serif;
+  color: #617D8A;
+  font-size: 11pt;
+  letter-spacing: -0.5px;
+  margin: 0 0 20px 0;
+  line-height: 1.8;
+  clear: right; }
 
 .post-description {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 11pt;
+  font-size: 10pt;
   border-bottom: 1px solid #617D8A;
   color: #159587;
   padding: 7px; }
+
+.about {
+  padding: 0 10px; }
+
+form input, form textarea {
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, sans-serif;
+  background-color: #fff;
+  font-size: 11pt;
+  width: 100%;
+  border: 1px solid #617D8A;
+  resize: vertical;
+  padding: 15px 20px;
+  margin: 10px 0; }
+form button[type=submit] {
+  background-color: #1FBDD6;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 35px;
+  width: 200px;
+  color: white;
+  border: none;
+  float: right; }
+  form button[type=submit]:hover {
+    background-color: #1996a9; }
+  form button[type=submit]:active {
+    background-color: #126e7d; }
+
+h1, h4 {
+  float: right;
+  clear: right;
+  color: #1FBDD6;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0; }
+
+h1 {
+  margin-top: 50px; }
+
+h4 {
+  margin-bottom: 20px; }
+
+footer {
+  clear: right;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #617D8A;
+  font-size: 10pt; }
 
 /*# sourceMappingURL=style1.css.map */

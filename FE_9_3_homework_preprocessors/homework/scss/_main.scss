@@ -13,8 +13,8 @@ header {
   nav {
     align-self: flex-end;
     margin-bottom: 50px;
-    border-bottom: 1px solid #617D8A;
-    border-top: 1px solid #617D8A;
+    border-bottom: $border;
+    border-top: $border;
     height: 60px;
     width: 100%;
     display: flex;
@@ -25,7 +25,15 @@ header {
       text-decoration: none;
       margin-top: 3px;
       color: $textColorNav;
-      font-family: $textFontNav;
+      font-family: $textFont;
+      &:hover {
+        color: darken($textColorNav, 10%);
+        text-decoration:underline;
+      }
+      &:active {
+        color: darken($textColorNav, 20%);
+        text-decoration:underline;
+      }
     }
   }
 }
@@ -34,10 +42,24 @@ header {
   float: right;
   margin-bottom: 20px;
 
-  input {
+  input[type=text] {
+    background-color: $contentBackground;
+    box-sizing: border-box;
     height: 35px;
     width: 200px;
+    border: 1px solid $textColorNav;
+    color: $textColorNav;
+    padding-left: 20px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+    &:focus {
+      width: 400px;
+    }
+    &::placeholder{
+      color: $textColorNav;
+    }
   }
+
 }
 
 .post-list {
@@ -49,27 +71,100 @@ header {
 }
 
 article {
-  width: 445px;
+  width: 448px;
   background-color: $articleBackground;
   padding: 10px;
   margin-bottom: 20px;
   height: max-content;
-  img {
-    width: 100%;
-  }
+
   h3{
     text-transform: uppercase;
-    font-family: $textFontNav;
+    font-family: $textFont;
     font-weight: bold;
     color: $textColorHeaders;
-    margin: 7px;
+    letter-spacing: -0.5px;
+    margin: 7px 0 0 0;
   }
+  &>div{
+    margin: 0 10px;
+
+  }
+
+}
+img {
+  width: 100%;
+}
+p{
+  font-family: $textFontParagraph;
+  color: $textColorParagraph;
+  font-size: 11pt;
+  letter-spacing: $letterSpacing;
+  margin: 0 0 20px 0;
+  line-height: 1.8;
+  clear: right;
 }
 .post-description{
-  font-family: $textFontNav;
-  font-size: 11pt;
-  border-bottom: 1px solid #617D8A;
+  font-family: $textFont;
+  font-size: 10pt;
+  border-bottom: $border;
   color: $postDescriptionColor;
   padding: 7px;
 
+}
+.about{
+  padding: 0 10px;
+}
+
+form {
+  input, textarea {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, sans-serif;
+    background-color: $contentBackground;
+    font-size: 11pt;
+    width: 100%;
+    border: $border;
+    resize: vertical;
+    padding: 15px 20px;
+    margin: 10px 0;
+  }
+  button[type=submit] {
+    background-color: $textColorNav;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 35px;
+    width: 200px;
+    color: white;
+    border: none;
+    float: right;
+    &:hover {
+      background-color: darken($textColorNav, 10%)
+    }
+    &:active {
+      background-color: darken($textColorNav, 20%)
+    }
+  }
+}
+
+
+
+h1, h4 {
+    float: right;
+    clear: right;
+    color: $textColorNav;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: $textFont;
+    margin: 0;
+  }
+h1{
+  margin-top:50px;
+}
+h4{
+  margin-bottom: 20px;
+}
+footer{
+  clear: right;
+  font-family: $textFont;
+  color: $textColorParagraph;
+  font-size: 10pt;
 }
