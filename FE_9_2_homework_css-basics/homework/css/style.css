@@ -141,7 +141,8 @@
     }
 
     /*task 12*/
-    input[type=text], button[type=submit] {
+    .form-control,
+    button[type=submit] {
         color: red;
     }
 
@@ -157,4 +158,3 @@
         border-color: #76cdd7;
     }
 }
-

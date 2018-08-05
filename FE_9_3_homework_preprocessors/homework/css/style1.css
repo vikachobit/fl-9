@@ -1,11 +1,25 @@
+p, footer {
+  font-family: Verdana, Geneva, sans-serif;
+  color: #617D8A;
+  letter-spacing: -0.5px;
+  font-size: 11pt;
+  line-height: 1.8; }
+
+article h3, h1, h4 {
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #1697A6;
+  letter-spacing: -0.5px;
+  margin: 7px 0 0 0; }
+
 body {
   width: 960px;
   margin: 0 auto;
   background: #fff; }
 
 header {
-  display: flex;
-  flex-direction: row; }
+  display: flex; }
   header img {
     width: 380px; }
   header nav {
@@ -35,12 +49,14 @@ header {
   float: right;
   margin-bottom: 20px; }
   .toolbar input[type=text] {
-    background-color: #fff;
+    background-color: transparent;
     box-sizing: border-box;
     height: 35px;
     width: 200px;
     border: 1px solid #1FBDD6;
     color: #1FBDD6;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 11pt;
     padding-left: 20px;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out; }
@@ -62,13 +78,6 @@ article {
   padding: 10px;
   margin-bottom: 20px;
   height: max-content; }
-  article h3 {
-    text-transform: uppercase;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    color: #1697A6;
-    letter-spacing: -0.5px;
-    margin: 7px 0 0 0; }
   article > div {
     margin: 0 10px; }
 
@@ -76,12 +85,7 @@ img {
   width: 100%; }
 
 p {
-  font-family: Verdana, Geneva, sans-serif;
-  color: #617D8A;
-  font-size: 11pt;
-  letter-spacing: -0.5px;
   margin: 0 0 20px 0;
-  line-height: 1.8;
   clear: right; }
 
 .post-description {
@@ -97,7 +101,7 @@ p {
 form input, form textarea {
   box-sizing: border-box;
   font-family: Verdana, Geneva, sans-serif;
-  background-color: #fff;
+  background-color: transparent;
   font-size: 11pt;
   width: 100%;
   border: 1px solid #617D8A;
@@ -122,9 +126,6 @@ h1, h4 {
   float: right;
   clear: right;
   color: #1FBDD6;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-family: Arial, Helvetica, sans-serif;
   margin: 0; }
 
 h1 {
@@ -134,9 +135,6 @@ h4 {
   margin-bottom: 20px; }
 
 footer {
-  clear: right;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #617D8A;
-  font-size: 10pt; }
+  clear: right; }
 
 /*# sourceMappingURL=style1.css.map */
