@@ -1,4 +1,4 @@
-p, footer {
+p, .post-description, footer {
   font-family: New Century Schoolbook, serif;
   color: #75777E;
   letter-spacing: 0;
@@ -16,7 +16,7 @@ article h3, h1, h4 {
 body {
   width: 960px;
   margin: 0 auto;
-  background: #EFEFEF; }
+  background-color: #EFEFEF; }
 
 header {
   display: flex; }
@@ -89,11 +89,10 @@ p {
   clear: right; }
 
 .post-description {
-  font-family: New Century Schoolbook, serif;
   font-size: 10pt;
   border-bottom: 1px solid #CFD8DC;
   color: #CABEBB;
-  padding: 7px; }
+  padding-left: 7px; }
 
 .about {
   padding: 0 10px; }

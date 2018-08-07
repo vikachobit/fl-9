@@ -21,7 +21,7 @@
 body {
   width: 960px;
   margin: 0 auto;
-  background: $contentBackground;
+  background-color: $contentBackground;
 }
 
 header {
@@ -113,11 +113,11 @@ p{
   clear: right;
 }
 .post-description{
-  font-family: $textFont;
+  @extend %paragraph-text;
   font-size: 10pt;
   border-bottom: $border;
   color: $postDescriptionColor;
-  padding: 7px;
+  padding-left: 7px;
 
 }
 .about{
@@ -149,7 +149,8 @@ form {
       background-color: darken($textColorNav, 10%)
     }
     &:active {
-      background-color: darken($textColorNav, 20%)
+      background-color: darken($textColorNav, 20%);
+
     }
   }
 }

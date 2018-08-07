@@ -1,4 +1,4 @@
-p, footer {
+p, .post-description, footer {
   font-family: Verdana, Geneva, sans-serif;
   color: #617D8A;
   letter-spacing: -0.5px;
@@ -16,7 +16,7 @@ article h3, h1, h4 {
 body {
   width: 960px;
   margin: 0 auto;
-  background: #fff; }
+  background-color: #fff; }
 
 header {
   display: flex; }
@@ -89,11 +89,10 @@ p {
   clear: right; }
 
 .post-description {
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 10pt;
   border-bottom: 1px solid #617D8A;
   color: #159587;
-  padding: 7px; }
+  padding-left: 7px; }
 
 .about {
   padding: 0 10px; }
