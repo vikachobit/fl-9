@@ -194,15 +194,17 @@ footer {
     padding: 20px;
     box-shadow: inset -9px -48px 145px 0 rgba(0, 0, 0, 0.51);
 }
+
 .article-container:nth-child(even) {
     flex-direction: row-reverse;
 }
-.article-container:nth-child(odd) .article-image{
+
+.article-container:nth-child(odd) .article-image {
     background: url("../img/sample3.jpg") no-repeat;
     background-size: cover;
 }
 
-.article-container:nth-child(even) .article-image{
+.article-container:nth-child(even) .article-image {
     background: url("../img/sample.jpg") no-repeat;
     background-size: cover;
 }
@@ -223,6 +225,7 @@ footer {
     display: flex;
     justify-content: space-between;
 }
+
 .subscribe {
     background: rgb(255, 255, 255);
     margin: 40px 30px 40px 50px;
