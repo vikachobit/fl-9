@@ -1,12 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>CSS Layouts</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Layouts</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans"
+          rel="stylesheet" type="text/css">
 </head>
 <body>
-    <!-- Your code goes here -->
+<header>
+    <div class="header-top">
+        <span>Black & White</span>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#news">About</a></li>
+                <li><a href="#vacancies">Vacancies</a></li>
+                <li><a href="#shop">Shop</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="header-center" id="home">
+        <h1>Black <span>&</span> White</h1>
+        <p>An Original Brand Since 1965</p>
+        <button class="btn-main">Show More</button>
+    </div>
+</header>
+<main class="main">
+    <section class="main-article">
+        <!--<article class="main-article">-->
+            <div class="article-header">
+                <h2>Certainty listening no no behaviour <b>existence assurance</b> situation </h2>
+            </div>
+            <div class="article-paragraph">
+                <p> Examine she brother prudent add day ham. Far stairs now coming bed
+                    oppose hunted become his. You zealously departure had procuring suspicion.
+                    Books whose front would purse if be do decay. Quitting you way formerly
+                    disposed perceive ladyship are. Examine she brother prudent add day ham. Far stairs now coming bed
+                    oppose hunted become his.</p>
+            </div>
+        <!--</article>-->
+    </section>
+    <section class="featured-articles">
+        <h2>Read some of our <b>featured articles</b></h2>
+        <article class="article-container">
+            <div class="article-image">
+                <button class="like">
+                    172 &#10084;
+                </button>
+                <div>
+                    January`15 <b>South France</b>
+                </div>
+            </div>
+            <div class="article-text">
+                <h4>Examine she brother prudent add day ham. Far stairs now coming bed
+                    oppose hunted become his. You zealously departure had procuring suspicion.
+                    Books whose front would purse if be do decay. Quitting you way formerly
+                    disposed perceive ladyship are. </h4>
+            </div>
+        </article>
+        <article class="article-container">
+            <div class="article-text">
+                <h4>Examine she brother prudent add day ham. Far stairs now coming bed
+                    oppose hunted become his. You zealously departure had procuring suspicion.
+                    Books whose front would purse if be do decay. Quitting you way formerly
+                    disposed perceive ladyship are.</h4>
+            </div>
+            <div class="article-image">
+                <button class="like">
+                    172 &#10084;
+                </button>
+                <div>
+                    January`15 <b>South France</b>
+                </div>
+            </div>
+        </article>
+        <article class="article-container">
+            <div class="article-image">
+                <button class="like">
+                    12 &#10084;
+                </button>
+                <div>
+                    January`15 <b>South France</b>
+                </div>
+            </div>
+            <div class="article-text">
+                <h4>Examine she brother prudent add day ham. Far stairs now coming bed
+                    oppose hunted become his. You zealously departure had procuring suspicion.
+                    Books whose front would purse if be do decay. Quitting you way formerly
+                    disposed perceive ladyship are.</h4>
+            </div>
+        </article>
+        <article class="article-container">
+            <div class="article-text">
+                <h4>Examine she brother prudent add day ham. Far stairs now coming bed
+                    oppose hunted become his. You zealously departure had procuring suspicion.
+                    Books whose front would purse if be do decay. Quitting you way formerly
+                    disposed perceive ladyship are.</h4>
+            </div>
+            <div class="article-image">
+                <button class="like">
+                    12 &#10084;
+                </button>
+                <div>
+                    January`15 <b>South France</b>
+                </div>
+            </div>
+        </article>
+        <div class="subscribe">
+            <label for="email">Subscribe to our <b>newsletter</b></label>
+            <div class="row">
+                <div class="col-75">
+                    <input type="email" id="email" placeholder="Enter your e-mail address">
+                </div>
+                <div class="col-25">
+                    <input type="submit" value="Subscribe">
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <section>
+        <div class="im-info">
+            <h3>Black & White</h3>
+            <p>Examine she brother prudent add day ham. Far stairs now coming bed
+                oppose hunted become his. You zealously departure had procuring suspicion.</p>
+        </div>
+        <div class="im-info">
+            <h3>Last Tweet</h3>
+            <p><i>Books whose front would purse if be do decay. Quitting you way formerly
+                disposed perceive ladyship are.</i></p>
+            <p class="tweet">3 years ago</p>
+        </div>
+        <div class="im-info">
+            <h3>Contacts</h3>
+            <p> www.randomtextgenerat.ni<br>
+                182 ABC Your Street Name<br>
+                random@textgenerator.com<br>
+                +(350) 23 23 233
+            </p>
+        </div>
+        <div class="footer-news">
+            <h3>Newsletter</h3>
+            <p>The plugin adds a random text generator, capable of creating witty</p>
+            <div class="row">
+                <div class="col-75">
+                    <input type="email" id="mail" placeholder="Enter your e-mail address">
+                </div>
+                <div class="col-25">
+                    <input type="submit" id="submit" value="Subscribe">
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="footer-nav">
+        <span>&copy; 2015 Ruben Stom</span>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#news">About</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#vacancies">Vacancies</a></li>
+            </ul>
+        </nav>
+    </div>
+</footer>
 </body>
 </html>
