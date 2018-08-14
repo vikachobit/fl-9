@@ -56,14 +56,17 @@ article {
     align-items: center;
 }
 
-article:nth-child(odd) {
+article:nth-child(even) {
     flex-direction: row-reverse;
 }
 
 .description p {
     text-align: justify;
+    text-indent: 20px;
 }
-
+svg{
+    max-width: 294px;
+}
 h2 {
     font-size: 2em;
     background: linear-gradient(to right, #ddd 0%, #5d5d5d 100%);
@@ -86,7 +89,7 @@ img {
         margin: auto;
     }
 
-    article:nth-child(odd) {
+    article:nth-child(even) {
         flex-direction: column;
     }
 
