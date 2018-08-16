@@ -13,13 +13,9 @@ if (login) {
     alert('Canceled')
 }
 
-function greeting(password) {
+function greeting(password){
     if (password === 'SuperUser') {
-        if (new Date().getHours() < 20) {
-            alert('Good day!')
-        } else {
-            alert('Good evening!')
-        }
+        (new Date().getHours() < 20) ? alert('Good day!') : alert('Good evening!');
     } else {
         alert('Wrong password')
     }
