@@ -1,35 +1,66 @@
 const MAX_PRIZE = 10;
-const AMOUNT = 6;
+const AMOUNT = 5;
+let totalPrize = 0;
 let offer = confirm('Do you want to play a game?');
+let refuse = 'You did not become a millionaire, but can.';
 if (!offer) {
-    alert('You did not become a millionaire, but can.');
+    alert(refuse);
 } else {
-    theGame()
+    startGame(MAX_PRIZE, AMOUNT, totalPrize)
 }
-
-function theGame() {
-    let randomNum = Math.floor(Math.random() * AMOUNT);
-    console.log(randomNum);
-    for (let i = 1; i <= 3; i++) {
-        let userNum = parseFloat(prompt('Enter a number in range [0; 5]', ''));
+/*eslint no-magic-numbers: ["error", { "ignore": [0,1,2,3,4] }]*/
+function startGame(maxPrize, range, totalSum) {
+    let randomNum = Math.floor(Math.random() * (range + 1));
+    let currentPrize = maxPrize;
+    for (let i = 0; i <= 2; i++) {
+        let userNum = parseFloat(prompt(`Enter a number in range [0 ; ${range}]` + `\n` +
+            `Attempts left: ${3 - i}` + `\n` +
+            `Total prize: ${totalSum}$` + `\n` +
+            `Maximum possible prize in this game: ${currentPrize}$`));
         if (randomNum === userNum) {
             switch (i) {
+                case 0:
+                    totalSum += currentPrize;
+                    confirm(`Congratulation! Your price is ${currentPrize}$` + `\n` +
+                        `Do you want to continue?`) ? startGame(maxPrize * 3, range * 2, totalSum) : endGame(totalSum);
+                    break;
                 case 1:
-                    confirm(`Congratulation! Your price is ${MAX_PRIZE}$.  Do you want to continue?`);
+                    currentPrize = maxPrize / 2;
+                    totalSum += currentPrize;
+                    confirm(`Congratulation! Your price is ${currentPrize}$`+`\n`+
+                    `Do you want to continue?`) ? startGame(maxPrize * 3, range * 2, totalSum) : endGame(totalSum);
                     break;
                 case 2:
-                    alert(`Congratulation! Your price is ${MAX_PRIZE / 2}$.  Do you want to continue?`);
+                    currentPrize = Math.floor(maxPrize / 4);
+                    totalSum += currentPrize;
+                    confirm(`Congratulation! Your price is ${currentPrize}$`+`\n`+
+                    `Do you want to continue?`) ? startGame(maxPrize * 3, range * 2, totalSum) : endGame(totalSum);
                     break;
-                case 3:
-                    alert(`Congratulation! Your price is ${Math.floor(MAX_PRIZE / 4)}$.  Do you want to continue?`);
-                    break;
+                default: break;
             }
             break;
-        } else if (!!(3 - i)) {
-            alert(`Attempts left: ${(3 - i)}`);
         } else {
-            alert('Thank you for a game. Your prize is: 0$')
+            switch (i) {
+                case 1:
+                    currentPrize = maxPrize / 2;
+                    break;
+                case 2:
+                    currentPrize = Math.floor(maxPrize / 4);
+                    break;
+                case 3:
+                    endGame(totalPrize);
+                    break;
+                default: break;
+            }
         }
     }
+}
 
+function endGame(prize) {
+    alert(`Thank you for a game. Your prize is: ${prize}$`);
+    if (confirm('Do you want to try again?')) {
+        startGame(MAX_PRIZE, AMOUNT, totalPrize)
+    } else {
+        alert(refuse);
+    }
 }
