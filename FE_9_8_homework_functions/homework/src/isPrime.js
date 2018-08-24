@@ -7,4 +7,3 @@ function isPrime(number){
     return number > 1
 }
 
-console.log(isPrime(8));
