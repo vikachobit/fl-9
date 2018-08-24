@@ -24,7 +24,7 @@ module.exports = {
 		"no-return-assign": "error",
 		"no-self-compare": "error",
 		"no-useless-call": "error",
-		"no-undef-init": "error",
+		"no-undef-init": "off",
 		"block-spacing": "error",
 		"brace-style": "error",
 		"comma-dangle": ["error", "never"],
